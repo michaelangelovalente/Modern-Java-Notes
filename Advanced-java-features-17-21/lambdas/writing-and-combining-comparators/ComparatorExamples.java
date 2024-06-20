@@ -58,8 +58,12 @@ public class ComparatorExamples {
         string.sort(byLengthThenAlphabetically.reversed());
         System.out.println(strings);
 
-        // Dealing with null values. Convention --> push null values at the end 
-                        
+        // Dealing with null values. Convention --> push null values at the end
+         Comparator<Integer> naturalOrder = Comparator.naturalOrder();
+         Comparator<Integer> naturalOrderNullsLast = Comparator.nullsLast(naturalOrder());
+         
+         List<String> strings2 = Arrays.asList("one", null, "two", "three", null, null, "four", "five");
+
         
 
     }
