@@ -32,5 +32,7 @@ public class CollectionsExamples {
         strings2.removeIf(isNullOrEmpty);
         System.out.println("filtered strings = " + strings2);
 
+        // ###
+
     }
 }
