@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/generics" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lambdas" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CollectionFramework" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "CollectionFramework",
+        "generics",
+        "lambdas",
+        "refactFromImpToFunctional"
+    ],
+    "java.project.referencedLibraries": []
+}
