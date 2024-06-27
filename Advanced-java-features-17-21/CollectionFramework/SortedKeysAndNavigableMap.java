@@ -33,5 +33,10 @@ public class SortedKeysAndNavigableMap {
         NavigableSet<Integer> descindingKeys = nMap.descendingKeySet();
         descindingKeys.forEach(k -> System.out.println(k + " "));
 
+        // ## CHOOSING IMMUTABLE TYPE FOR YOU KEY
+        // ### Avoiding the Use of Mutable keys --. (this sums it up....) :D just i case
+        // check: https://dev.java/learn/api/collections-framework/choosing-keys/
+
     }
+
 }
