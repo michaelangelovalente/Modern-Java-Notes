@@ -53,10 +53,10 @@ public class LambdaJavaFunc {
         // Passing a predicate to a Collection
         List<String> immutableString = List.of("one", "two", "three", "four", "five");
 
-        List<String> strings = new ArrayList<>(immutableString);
+        List<String> strings2 = new ArrayList<>(immutableString);
 
         Predicate<String> isEvenLength = s -> s.length() % 2 == 0;
-        strings.removeIf(isEvenLength);
+        strings2.removeIf(isEvenLength);
 
     }
 }
