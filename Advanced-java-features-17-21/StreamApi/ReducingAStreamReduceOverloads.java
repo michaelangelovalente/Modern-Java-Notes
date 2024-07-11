@@ -43,17 +43,18 @@ public class ReducingAStreamReduceOverloads {
         // <U> U reduce(U identity,
         // BiFunction<U, ? super T, U> accumulator,
         // BinaryOperator<U> combiner);
-        Stream<Strings> stringsOv3 = Stream.of("one", "two", "three", "four");
+        Stream<String> stringsOv3 = Stream.of("one", "two", "three", "four");
         BiFunction<Integer, String, Integer> accumulatorOv3 = (partialReduction, element) -> partialReduction
                 + element.length();
         BinaryOperator<Integer> combinerOv3 = (length1, length2) -> length1 + length2;
-        int resultOv3 = strings.reduce(0, accumulatorOv3, combinerOv3);
+        int resultOv3 = stringsOv3.reduce(0, accumulatorOv3, combinerOv3);
         System.out.println("Reduce res1=" + resultOv3);
 
         // You can instead use a mapper for the accumulator
         Function<String, Integer> mapper = String::length;
         BiFunction<Integer, String, Integer> accumulatorOv3Improved = (partialReduction, element) -> partialReduction
                 + mapper.apply(element);
-
+        resultOv3 = stringsOv3.reduce(0, accumulatorOv3Improved, combinerOv3);
+        System.out.println("Reduce res2=" + resultOv3);
     }
 }
