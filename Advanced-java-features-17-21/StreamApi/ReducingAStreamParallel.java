@@ -14,7 +14,6 @@ public class ReducingAStreamParallel {
 
         int result = sum.apply(result1, result2);
         System.out.println("sum = " + result);
-
     }
 
     // ####### Choosing a binary operator that can be used in parallel
