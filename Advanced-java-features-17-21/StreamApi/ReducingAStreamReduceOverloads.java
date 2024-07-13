@@ -51,10 +51,11 @@ public class ReducingAStreamReduceOverloads {
         System.out.println("Reduce res1=" + resultOv3);
 
         // You can instead use a mapper for the accumulator
+        Stream<String> stringsOv3_2 = Stream.of("one", "two", "three", "four", "five");
         Function<String, Integer> mapper = String::length;
         BiFunction<Integer, String, Integer> accumulatorOv3Improved = (partialReduction, element) -> partialReduction
                 + mapper.apply(element);
-        resultOv3 = stringsOv3.reduce(0, accumulatorOv3Improved, combinerOv3);
+        resultOv3 = stringsOv3_2.reduce(0, accumulatorOv3Improved, combinerOv3);
         System.out.println("Reduce res2=" + resultOv3);
     }
 }
