@@ -1,0 +1,10 @@
+{
+    "java.project.sourcePaths": [
+        "Advanced-java-features-17-21/CollectionFramework",
+        "Advanced-java-features-17-21/Generics",
+        "Advanced-java-features-17-21/Lambdas",
+        "Advanced-java-features-17-21/RefactoringFromImpToFunctional",
+        "Advanced-java-features-17-21/StreamApi"
+    ],
+    "java.project.referencedLibraries": []
+}
