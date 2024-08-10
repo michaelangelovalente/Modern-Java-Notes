@@ -178,5 +178,28 @@ public class CreatingYourOwnCollector {
                 // 3. BiFunction used to merge the two containers created by the downstream
                 // collector
 
+                List<Vehicle> electricVehicles = vehicles.stream()
+                                .collect(
+
+                                                Collectors.teeing(
+                                                                // 1 downstream collector
+                                                                Collectors.filtering(
+                                                                                // PREDICATE
+                                                                                vehicle -> vehicle instanceof Car car
+                                                                                                && car.engine() == Engine.ELECTRIC,
+                                                                                Collectors.toList()),
+
+                                                                // 2 downstream collector
+                                                                Collectors.filtering(
+                                                                                // PREDICATE
+                                                                                vehicle -> vehicle instanceof Truck truck
+                                                                                                && truck.engine() == Engine.ELECTRIC,
+                                                                                Collectors.toList()),
+                                                                // 3 BiFunction
+                                                                (cars, trucks) -> {
+                                                                        cars.addAll(trucks);
+                                                                        return cars;
+                                                                }));
+
         }
 }
